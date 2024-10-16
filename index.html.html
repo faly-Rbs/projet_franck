@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabri</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div>
+            <img src="images/LOGO ALABRI.png" alt="Logo ALAbri" style="height: 40px; vertical-align: middle;">
+            <span style="font-size: 1.5rem; font-weight: bold; vertical-align: middle; 
+            margin-left: 1.5rem;font-family: 'Times New Roman', Times, serif;">L'Homme et la nature alabri</span>
+        </div>
+        <div class="menu">
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#rapport">Rapport</a>
+            <a href="#fichiers">Fichiers</a>
+            <a href="#utilisateur">Utilisateur</a>
+            <button class="btn1" style="margin-left: 1rem;">Déconnexion</button>
+        </nav>
+    </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Tableau de bord d'administrateur</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Total des utilisateurs</h3>
+                    <p id="totalUsers" style="font-size: 2rem; font-weight: bold;">Chargement...</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Total des fichiers</h3>
+                    <p id="totalFiles" style="font-size: 2rem; font-weight: bold;">Chargement...</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Espace utilisé</h3>
+                    <p id="usedSpace" style="font-size: 2rem; font-weight: bold;">Chargement...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Courbe d'approbation des membres</h2>
+            <div class="chart-container">
+                <canvas id="approvalChart"></canvas>
+            </div>
+        </section>
+
+        <section class="user-management">
+            <h2>Gestion des utilisateurs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Rôle</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                    <!-- Les données des utilisateurs seront insérées ici par JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="file-list">
+            <h2>Liste des Fichiers ajoutés par les Utilisateurs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom du Fichier</th>
+                        <th>Chemin du Fichier</th>
+                        <th>Taille (Ko)</th>
+                        <th>Date d'Upload</th>
+                        <th>Nom de l'Utilisateur</th>
+                        <th>Email de l'Utilisateur</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="fileTable">
+                    <!-- Les données des fichiers seront insérées ici par JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    
+</body>
+</html>
